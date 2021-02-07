@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-now" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -103,42 +103,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit.Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </main>
-    <script>
-        function ticketNumberControl(type,isIncrease){
-            var ticketInput = document.getElementById(type+"-input").value;
-            var ticketCount = parseInt(ticketInput);
-            if(isIncrease == true ){
-                var numberOfTicket = ticketCount +1;   
-                document.getElementById(type+'-input').value = numberOfTicket; 
-            }
-            if(isIncrease == false ){
-                if (ticketCount > 0) {
-                var numberOfTickets = ticketCount -1;
-                document.getElementById(type+'-input').value = numberOfTicket;
-                }else{
-                    console.log("error");
-                }    
-            }
-            if (type == 'business'){
-                var subTotals = numberOfTicket * 150;
-                console.log(subTotals);
-                document.getElementById('sub-total').innerText ='$'+subTotals;
-            }
-            if(type == 'economy'){
-                var subTotals = numberOfTicket * 100;
-                console.log(subTotals);
-                document.getElementById('sub-total').innerText ='$'+subTotals;
-                
-            }
-                var vatCalculation= subTotals*0.1;
-                document.getElementById('vat').innerText ='$'+vatCalculation;
-                var grandTotal = vatCalculation + subTotals;
-                console.log(grandTotal);
-                document.getElementById('grand-total').innerText ='$'+grandTotal;
-    
-    }
-    </script>
-
+    <script src="script.js"></script>
     <!--Thank You-->
 </body>
 
