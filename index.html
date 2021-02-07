@@ -123,47 +123,20 @@
                 var subTotals = numberOfTicket * 150;
                 console.log(subTotals);
                 document.getElementById('sub-total').innerText ='$'+subTotals;
-                var vatCalculation= subTotals*0.1;
-                document.getElementById('vat').innerText ='$'+vatCalculation;
             }
             if(type == 'economy'){
                 var subTotals = numberOfTicket * 100;
                 console.log(subTotals);
                 document.getElementById('sub-total').innerText ='$'+subTotals;
+                
+            }
                 var vatCalculation= subTotals*0.1;
                 document.getElementById('vat').innerText ='$'+vatCalculation;
-            }
-
-
-            /*if (type =='business') {
-                var subTotals = numberOfTicket* 150;
-            }
-            if (type =='economy') {
-                var subTotal = numberOfTickets * 100;
-            }
-            var subTotalAll = subTotals+subtotal;
-            document.getElementById('sub-total').innerText ='$'+subTotalAll;
-            var vatCalculation= subTotalAll*0.1;
-            document.getElementById('vat').innerText ='$'+vatCalculation;
-            var totalPriceOfticket = subTotalAll +vatCalculation;
-            document.getElementById('grand-total').innerText ='$'+vatCalculation;
-        }*/
-        /*function getTotalValue(type,ticketCount){
-            if (type =='business') {
-                var subTotals = ticketCount* 150;
-                console.log(subTotals);
-            }
-            if (type =='economy') {
-                var subTotal = ticketCount * 100;
-                console.log(subTotals);
-            }
-            var subTotalAll = subTotals+subtotal;
-            document.getElementById('sub-total').innerText ='$'+subTotalAll;
-            var vatCalculation= subTotalAll*0.1;
-            document.getElementById('vat').innerText ='$'+vatCalculation;
-            var totalPriceOfticket = subTotalAll +vatCalculation;
-            document.getElementById('grand-total').innerText ='$'+vatCalculation;
-        }*/
+                var grandTotal = vatCalculation + subTotals;
+                console.log(grandTotal);
+                document.getElementById('grand-total').innerText ='$'+grandTotal;
+    
+    }
     </script>
 
     <!--Thank You-->
