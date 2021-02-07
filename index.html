@@ -91,7 +91,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="total">$0</p>
+                        <p id="grand-total">$0</p>
                     </div>
                 </div>
             </div>
@@ -119,17 +119,37 @@
                     console.log("error");
                 }    
             }
-            if (type == 'business'){
+            /*if (type == 'business'){
                 var subTotals = numberOfTicket * 150;
                 console.log(subTotals);
                 document.getElementById('sub-total').innerText ='$'+subTotals;
+                var vatCalculation= subTotals*0.1;
+                document.getElementById('vat').innerText ='$'+vatCalculation;
             }
             if(type == 'economy'){
                 var subTotals = numberOfTicket * 100;
                 console.log(subTotals);
                 document.getElementById('sub-total').innerText ='$'+subTotals;
-            }
+                var vatCalculation= subTotals*0.1;
+                document.getElementById('vat').innerText ='$'+vatCalculation;
+            }*/
             
+        }
+        function getTotalValue(){
+            if (type =='business') {
+                var subTotals = numberOfTicket * 150;
+                console.log(subTotals);
+            }
+            if (type =='economy') {
+                var subTotal = numberOfTicket * 100;
+                console.log(subTotals);
+            }
+            var subTotalAll = subTotals+subtotal;
+            document.getElementById('sub-total').innerText ='$'+subTotalAll;
+            var vatCalculation= subTotalAll*0.1;
+            document.getElementById('vat').innerText ='$'+vatCalculation;
+            var totalPriceOfticket = subTotalAll +vatCalculation;
+            document.getElementById('grand-total').innerText ='$'+vatCalculation;
         }
 
        
